@@ -39,3 +39,9 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# brand extraction intermediates (keep PDFs + public/brand)
+/brand/page-*.png
+/brand/img-*.png
+/brand/manual-text.txt
+/brand/*-debug.png
