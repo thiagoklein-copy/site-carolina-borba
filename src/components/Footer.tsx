@@ -16,11 +16,11 @@ export function Footer() {
         <div>
           <div className="flex items-center gap-3">
             <Image
-              src="/brand/logo-seal-dark.webp"
+              src="/brand/logo-seal-dark.png"
               alt=""
               width={64}
               height={64}
-              className="h-16 w-16"
+              className="h-16 w-16 rounded-full"
             />
             <div>
               <p className="font-heading text-xl text-paper">{site.brandName}</p>

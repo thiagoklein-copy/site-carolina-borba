@@ -8,13 +8,13 @@ export function About() {
     <section id="sobre" className="scroll-mt-24 bg-paper py-16 md:py-24">
       <div className="mx-auto grid max-w-6xl items-start gap-12 px-5 md:grid-cols-[1fr_1.15fr] md:gap-16 md:px-8">
         <Reveal className="relative mx-auto w-full max-w-sm md:mx-0">
-          <div className="relative aspect-square overflow-hidden rounded-full bg-olive/15">
+          <div className="relative mx-auto aspect-square w-full max-w-[320px] overflow-hidden rounded-full md:mx-0">
             <Image
-              src="/brand/logo-seal.webp"
+              src="/brand/logo-seal.png"
               alt={`${site.legalName}, psicóloga`}
               fill
-              className="object-cover p-6"
-              sizes="(max-width: 768px) 80vw, 360px"
+              className="object-cover"
+              sizes="(max-width: 768px) 80vw, 320px"
             />
           </div>
           <p className="mt-4 text-center font-body text-caption text-clay-gray md:text-left">

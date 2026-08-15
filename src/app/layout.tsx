@@ -59,7 +59,7 @@ const jsonLd = {
   url: "https://carolinaborba.com.br",
   telephone: site.phoneDisplay,
   email: site.email,
-  image: "/brand/logo-seal.webp",
+  image: "/brand/logo-seal.png",
   identifier: {
     "@type": "PropertyValue",
     name: "CRP",

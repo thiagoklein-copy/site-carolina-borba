@@ -56,11 +56,11 @@ export function Header() {
       <div className="mx-auto flex max-w-6xl items-center justify-between gap-4 px-5 py-3 md:px-8">
         <a href="#topo" className="flex min-w-0 items-center gap-3">
           <Image
-            src="/brand/logo-seal.webp"
+            src="/brand/logo-seal.png"
             alt=""
             width={56}
             height={56}
-            className="h-14 w-14 shrink-0"
+            className="h-14 w-14 shrink-0 rounded-full"
             priority
           />
           <span className="min-w-0">

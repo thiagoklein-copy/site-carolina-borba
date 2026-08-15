@@ -15,11 +15,11 @@ export function ClosingCTA() {
 
       <Reveal className="relative mx-auto flex max-w-3xl flex-col items-center px-5 text-center md:px-8">
         <Image
-          src="/brand/logo-seal-dark.webp"
+          src="/brand/logo-seal-dark.png"
           alt=""
           width={140}
           height={140}
-          className="mb-8 h-[120px] w-[120px] md:h-[140px] md:w-[140px]"
+          className="mb-8 h-[120px] w-[120px] rounded-full md:h-[140px] md:w-[140px]"
         />
 
         <div className="rounded-3xl bg-shadow-green/70 px-6 py-2 backdrop-blur-[1px]">

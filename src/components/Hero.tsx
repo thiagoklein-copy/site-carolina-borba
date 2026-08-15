@@ -50,19 +50,21 @@ export function Hero() {
 
         <div className="relative mx-auto flex w-full max-w-md flex-col items-center">
           <div className="relative">
-            <Image
-              src="/brand/logo-seal.webp"
-              alt="Marca Carolina Borba — duas figuras em abraço com flor"
-              width={340}
-              height={340}
-              priority
-              className="h-auto w-[260px] md:w-[320px] lg:w-[340px]"
-            />
+            <div className="overflow-hidden rounded-full">
+              <Image
+                src="/brand/logo-seal.png"
+                alt="Marca Carolina Borba — duas figuras em abraço com flor"
+                width={340}
+                height={340}
+                priority
+                className="h-auto w-[260px] md:w-[320px] lg:w-[340px]"
+              />
+            </div>
             <a
               href={site.instagramUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="absolute -bottom-2 right-0 rounded-full border border-brown/20 bg-paper px-3.5 py-1.5 font-body text-caption font-semibold text-brown shadow-sm transition-colors hover:border-bordo hover:text-bordo md:right-4"
+              className="absolute -bottom-2 right-0 z-10 rounded-full border border-brown/20 bg-paper px-3.5 py-1.5 font-body text-caption font-semibold text-brown shadow-sm transition-colors hover:border-bordo hover:text-bordo md:right-4"
             >
               {site.instagramHandle}
             </a>
