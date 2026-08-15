@@ -45,3 +45,5 @@ next-env.d.ts
 /brand/img-*.png
 /brand/manual-text.txt
 /brand/*-debug.png
+
+/brand/tex-cand-*.webp
