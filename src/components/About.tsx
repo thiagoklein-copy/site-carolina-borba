@@ -5,30 +5,42 @@ import { site } from "@/lib/site";
 
 export function About() {
   return (
-    <section id="sobre" className="scroll-mt-24 bg-paper py-16 md:py-24">
-      <div className="mx-auto grid max-w-6xl items-start gap-12 px-5 md:grid-cols-[1fr_1.15fr] md:gap-16 md:px-8">
-        <Reveal className="relative mx-auto w-full max-w-sm md:mx-0">
-          <div className="relative mx-auto aspect-square w-full max-w-[320px] overflow-hidden rounded-full md:mx-0">
-            <Image
-              src="/brand/logo-seal.png"
-              alt={`${site.legalName}, psicóloga`}
-              fill
-              className="object-cover"
-              sizes="(max-width: 768px) 80vw, 320px"
-            />
-          </div>
-          <p className="mt-4 text-center font-body text-caption text-clay-gray md:text-left">
-            Psicóloga {site.legalName} · {site.crp}
+    <section id="sobre" className="section-space relative scroll-mt-24 overflow-hidden bg-paper">
+      {/* Soft texture wash in corner — seasoning, not full background */}
+      <div className="pointer-events-none absolute -right-20 top-10 hidden h-72 w-72 opacity-40 md:block">
+        <Image
+          src="/brand/texture-soft.webp"
+          alt=""
+          fill
+          className="object-cover"
+          sizes="288px"
+        />
+      </div>
+
+      <div className="relative mx-auto grid max-w-6xl items-start gap-14 px-5 md:grid-cols-[0.85fr_1.15fr] md:gap-20 md:px-8">
+        <Reveal className="mx-auto w-full max-w-[300px] md:mx-0">
+          <Image
+            src="/brand/logo-seal.png"
+            alt={`${site.legalName}, psicóloga`}
+            width={300}
+            height={300}
+            className="h-auto w-full"
+          />
+          <p className="mt-5 text-center font-body text-caption leading-relaxed text-brown/55 md:text-left">
+            Psicóloga {site.legalName}
+            <br />
+            {site.crp}
           </p>
         </Reveal>
 
-        <Reveal delay={0.08}>
+        <Reveal delay={0.06}>
           <SectionEyebrow icon="flowers">Quem sou eu</SectionEyebrow>
-          <h2 className="font-heading text-[1.75rem] leading-tight text-brown md:text-[2.5rem]">
+          <h2 className="font-heading text-[1.75rem] leading-[1.2] text-brown md:text-[2.5rem]">
             Olá, eu sou a Carolina
           </h2>
+          <span className="accent-rule" aria-hidden />
 
-          <div className="mt-6 space-y-4 font-body text-base leading-relaxed text-brown/90 md:text-lg">
+          <div className="mt-8 space-y-5 font-body text-base font-light leading-[1.75] text-brown/90 md:text-lg">
             <p>
               Sou Carolina Borba, psicóloga com abordagem em Terapia do Esquema
               Contextual, CRP 07/46868, atendendo em Novo Hamburgo e online.
@@ -56,23 +68,23 @@ export function About() {
             </p>
           </div>
 
-          <aside className="relative mt-8 max-w-lg rounded-2xl border border-dashed border-olive/50 bg-yellow-morning/20 px-5 py-5 md:px-6">
+          <aside className="relative mt-10 max-w-lg pl-5">
             <span
-              className="absolute -top-2 left-5 font-heading text-3xl leading-none text-rose-burnt"
+              className="absolute left-0 top-0 font-heading text-4xl leading-none text-rose-burnt"
               aria-hidden
             >
               “
             </span>
-            <div className="flex gap-3">
+            <div className="flex gap-3 border-l-2 border-yellow-morning pl-5">
               <Image
                 src="/brand/icon-flowers.png"
                 alt=""
-                width={28}
-                height={28}
-                className="mt-1 h-7 w-7 shrink-0 object-contain"
+                width={24}
+                height={24}
+                className="mt-1 h-6 w-6 shrink-0 object-contain"
                 aria-hidden
               />
-              <p className="font-heading text-lg italic leading-relaxed text-brown md:text-xl">
+              <p className="font-heading text-lg font-normal italic leading-relaxed text-brown md:text-xl">
                 Quando muito precisei, uma psicóloga me lembrou que eu não
                 estava sozinha. É isso que desejo proporcionar às pessoas que
                 atendo.

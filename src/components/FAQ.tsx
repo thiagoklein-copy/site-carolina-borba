@@ -31,24 +31,25 @@ export function FAQ() {
   const [open, setOpen] = useState<number | null>(0);
 
   return (
-    <section id="duvidas" className="scroll-mt-24 bg-paper py-16 md:py-24">
+    <section id="duvidas" className="section-space scroll-mt-24 bg-paper">
       <div className="mx-auto max-w-3xl px-5 md:px-8">
-        <Reveal className="text-center">
+        <Reveal>
           <SectionEyebrow>Dúvidas frequentes</SectionEyebrow>
-          <h2 className="font-heading text-[1.75rem] leading-tight text-brown md:text-[2.5rem]">
+          <h2 className="font-heading text-[1.75rem] leading-[1.2] text-brown md:text-[2.5rem]">
             Antes de começarmos
           </h2>
+          <span className="accent-rule" aria-hidden />
         </Reveal>
 
-        <div className="mt-10 divide-y divide-clay-gray/30 border-y border-clay-gray/30">
+        <div className="mt-12">
           {faqs.map((item, i) => {
             const isOpen = open === i;
             return (
-              <Reveal key={item.q} delay={i * 0.04}>
-                <div>
+              <Reveal key={item.q} delay={i * 0.03}>
+                <div className="border-t border-brown/12 py-5 last:border-b">
                   <button
                     type="button"
-                    className="flex w-full items-start justify-between gap-4 py-5 text-left"
+                    className="flex w-full items-start justify-between gap-4 text-left"
                     aria-expanded={isOpen}
                     onClick={() => setOpen(isOpen ? null : i)}
                   >
@@ -63,7 +64,7 @@ export function FAQ() {
                     </span>
                   </button>
                   {isOpen ? (
-                    <p className="pb-5 font-body text-base leading-relaxed text-brown/85">
+                    <p className="mt-3 max-w-2xl font-body text-base font-light leading-relaxed text-brown/80">
                       {item.a}
                     </p>
                   ) : null}

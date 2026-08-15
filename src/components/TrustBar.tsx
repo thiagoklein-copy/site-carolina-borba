@@ -19,20 +19,20 @@ export function TrustBar() {
   return (
     <section
       aria-label="Informações de atendimento"
-      className="border-b border-clay-gray/20 bg-paper"
+      className="border-y border-brown/10 bg-paper"
     >
-      <ul className="mx-auto grid max-w-6xl gap-4 px-5 py-5 md:grid-cols-3 md:gap-6 md:px-8 md:py-6">
+      <ul className="mx-auto flex max-w-6xl flex-col gap-5 px-5 py-7 md:flex-row md:items-center md:justify-between md:gap-8 md:px-8">
         {items.map((item) => (
           <li
             key={item.label}
-            className="flex items-center gap-3 font-body text-sm text-brown md:justify-center md:text-[0.95rem]"
+            className="flex items-center gap-3 font-body text-sm font-light text-brown md:text-[0.95rem]"
           >
             <Image
               src={item.icon}
               alt=""
-              width={28}
-              height={28}
-              className="h-7 w-7 shrink-0 object-contain"
+              width={26}
+              height={26}
+              className="h-[26px] w-[26px] shrink-0 object-contain"
               aria-hidden
             />
             <span>{item.label}</span>

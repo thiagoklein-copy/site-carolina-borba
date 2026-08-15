@@ -4,70 +4,78 @@ import { WhatsAppButton } from "@/components/ui/WhatsAppButton";
 
 export function Hero() {
   return (
-    <section
-      id="topo"
-      className="relative overflow-hidden border-b border-clay-gray/15"
-    >
+    <section id="topo" className="relative min-h-[92vh] overflow-hidden">
+      {/* Full-bleed brushstroke — brand cover treatment */}
       <div className="absolute inset-0">
         <Image
-          src="/brand/texture-hero.webp"
+          src="/brand/texture-cover.webp"
           alt=""
           fill
           priority
-          className="object-cover opacity-55"
+          className="object-cover object-center"
           sizes="100vw"
         />
-        <div className="absolute inset-0 bg-paper/55" />
+        <div className="absolute inset-0 bg-paper/35" />
       </div>
 
-      <div className="relative mx-auto grid max-w-6xl items-center gap-10 px-5 py-16 md:grid-cols-2 md:gap-12 md:px-8 md:py-24 lg:py-28">
-        <div className="rounded-3xl bg-paper/85 p-6 backdrop-blur-[2px] md:p-8">
-          <span className="mb-5 inline-flex rounded-full border border-brown/25 bg-paper px-4 py-1.5 font-body text-caption font-semibold text-brown">
-            Psicóloga Clínica · {site.crp}
-          </span>
+      <div className="relative mx-auto flex min-h-[92vh] max-w-6xl flex-col justify-center px-5 py-16 md:px-8 md:py-20">
+        <div className="grid items-center gap-12 lg:grid-cols-[1.05fr_0.95fr] lg:gap-8">
+          {/* Copy sits on paper panel so it never fights the texture */}
+          <div className="paper-panel max-w-xl px-6 py-8 md:px-9 md:py-10">
+            <p className="mb-5 font-body text-[0.7rem] font-semibold uppercase tracking-[0.18em] text-brown/70">
+              Psicóloga Clínica · {site.crp}
+            </p>
 
-          <h1 className="font-heading text-[2.125rem] leading-[1.25] text-brown md:text-[3.625rem] md:leading-[1.2]">
-            Colocar em palavras o que você sente, mas nunca conseguiu{" "}
-            <span className="text-bordo">traduzir</span>.
-          </h1>
+            <h1 className="font-heading text-[2.125rem] font-medium leading-[1.2] text-brown md:text-[3.4rem] md:leading-[1.15]">
+              Colocar em palavras o que você sente, mas nunca conseguiu{" "}
+              <span className="text-bordo">traduzir</span>.
+            </h1>
+            <span className="accent-rule" aria-hidden />
 
-          <p className="mt-5 max-w-xl font-body text-base leading-relaxed text-brown/85 md:text-lg">
-            Psicoterapia para mulheres jovens e adolescentes que aprenderam cedo
-            a dar conta de tudo sozinhas. Atendimento presencial em Novo
-            Hamburgo/RS e online para todo o Brasil.
-          </p>
+            <p className="mt-6 font-body text-base font-light leading-relaxed text-brown/85 md:text-lg">
+              Psicoterapia para mulheres jovens e adolescentes que aprenderam
+              cedo a dar conta de tudo sozinhas. Atendimento presencial em Novo
+              Hamburgo/RS e online para todo o Brasil.
+            </p>
 
-          <div className="mt-8 flex flex-col items-start gap-4 sm:flex-row sm:items-center">
-            <WhatsAppButton label="Falar no WhatsApp" />
-            <a
-              href="#sobre"
-              className="font-body text-base font-semibold text-brown underline decoration-green-medium decoration-2 underline-offset-4 transition-colors hover:text-bordo"
-            >
-              Conhecer meu trabalho ↓
-            </a>
+            <div className="mt-8 flex flex-col items-start gap-4 sm:flex-row sm:items-center">
+              <WhatsAppButton label="Falar no WhatsApp" />
+              <a
+                href="#sobre"
+                className="font-body text-base text-brown/80 transition-colors hover:text-bordo"
+              >
+                Conhecer meu trabalho ↓
+              </a>
+            </div>
           </div>
-        </div>
 
-        <div className="relative mx-auto flex w-full max-w-md flex-col items-center">
-          <div className="relative">
-            <div className="overflow-hidden rounded-full">
+          {/* Paper seal over texture — brand cover focal point */}
+          <div className="relative mx-auto flex w-full max-w-[380px] flex-col items-center lg:max-w-none">
+            <div className="relative">
               <Image
                 src="/brand/logo-seal.png"
                 alt="Marca Carolina Borba — duas figuras em abraço com flor"
-                width={340}
-                height={340}
+                width={400}
+                height={400}
                 priority
-                className="h-auto w-[260px] md:w-[320px] lg:w-[340px]"
+                className="h-auto w-[280px] drop-shadow-none md:w-[360px] lg:w-[400px]"
               />
+              <a
+                href={site.instagramUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="absolute bottom-4 right-0 rounded-full bg-paper px-4 py-1.5 font-body text-caption font-semibold text-brown transition-colors hover:text-bordo md:bottom-8 md:right-2"
+              >
+                {site.instagramHandle}
+              </a>
             </div>
-            <a
-              href={site.instagramUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="absolute -bottom-2 right-0 z-10 rounded-full border border-brown/20 bg-paper px-3.5 py-1.5 font-body text-caption font-semibold text-brown shadow-sm transition-colors hover:border-bordo hover:text-bordo md:right-4"
-            >
-              {site.instagramHandle}
-            </a>
+
+            <p className="mt-6 rounded-full bg-paper/90 px-5 py-2 text-center font-heading text-lg text-brown md:text-xl">
+              {site.brandName}
+            </p>
+            <p className="mt-1 font-body text-[0.7rem] uppercase tracking-[0.16em] text-brown/60">
+              Psicologia Clínica · {site.crp}
+            </p>
           </div>
         </div>
       </div>

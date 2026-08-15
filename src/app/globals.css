@@ -63,7 +63,8 @@ body {
   color: var(--color-brown);
   font-family: var(--font-source-sans), sans-serif;
   font-size: 1rem;
-  line-height: 1.65;
+  line-height: 1.7;
+  letter-spacing: 0.01em;
   -webkit-font-smoothing: antialiased;
 }
 
@@ -80,10 +81,11 @@ h4 {
   font-family: var(--font-alegreya-sans), sans-serif;
   font-weight: 500;
   color: var(--color-brown);
+  letter-spacing: -0.01em;
 }
 
 ::selection {
-  background-color: color-mix(in srgb, var(--color-bordo) 30%, transparent);
+  background-color: color-mix(in srgb, var(--color-bordo) 28%, transparent);
   color: var(--color-brown);
 }
 
@@ -93,4 +95,30 @@ h4 {
 
 .font-body {
   font-family: var(--font-source-sans), sans-serif;
+}
+
+/* Soft paper panel over texture — brand manual pattern */
+.paper-panel {
+  background: color-mix(in srgb, var(--color-paper) 92%, transparent);
+  border-radius: 1.75rem;
+}
+
+/* Accent underline like brand verb page */
+.accent-rule {
+  display: block;
+  width: 3.5rem;
+  height: 3px;
+  margin-top: 0.85rem;
+  background: var(--color-green-medium);
+  border-radius: 999px;
+}
+
+.section-space {
+  padding-block: 4.5rem;
+}
+
+@media (min-width: 768px) {
+  .section-space {
+    padding-block: 7rem;
+  }
 }

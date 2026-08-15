@@ -33,36 +33,35 @@ const cards = [
 
 export function ForWho() {
   return (
-    <section id="para-quem" className="scroll-mt-24 bg-paper py-16 md:py-24">
+    <section id="para-quem" className="section-space scroll-mt-24 bg-paper">
       <div className="mx-auto max-w-6xl px-5 md:px-8">
-        <Reveal className="mx-auto max-w-2xl text-center">
-          <SectionEyebrow icon="sunflower" tone="green">
-            Pra quem é esse espaço
-          </SectionEyebrow>
-          <h2 className="font-heading text-[1.75rem] leading-tight text-brown md:text-[2.5rem]">
+        <Reveal className="max-w-2xl">
+          <SectionEyebrow icon="sunflower">Pra quem é esse espaço</SectionEyebrow>
+          <h2 className="font-heading text-[1.75rem] leading-[1.2] text-brown md:text-[2.5rem]">
             Talvez isso faça sentido pra ti
           </h2>
+          <span className="accent-rule" aria-hidden />
         </Reveal>
 
-        <div className="mt-12 grid gap-8 md:grid-cols-2">
+        <div className="mt-14 grid gap-14 md:grid-cols-2 md:gap-16">
           {cards.map((card, i) => (
             <Reveal key={card.title} delay={i * 0.08}>
-              <article className="flex h-full flex-col border-t-2 border-green-medium bg-paper pt-6">
-                <h3 className="font-heading text-2xl text-brown md:text-[1.75rem]">
+              <article>
+                <h3 className="font-heading text-[1.65rem] text-brown md:text-2xl">
                   {card.title}
                 </h3>
-                <p className="mt-4 flex-1 font-body text-base leading-relaxed text-brown/85">
+                <p className="mt-4 font-body text-base font-light leading-relaxed text-brown/85">
                   {card.body}
                 </p>
 
-                <ul className="mt-6 space-y-2.5">
+                <ul className="mt-7 space-y-3">
                   {card.benefits.map((item) => (
                     <li
                       key={item}
-                      className="flex items-start gap-2.5 font-body text-sm text-brown md:text-base"
+                      className="flex items-start gap-3 font-body text-[0.95rem] font-light text-brown"
                     >
                       <span
-                        className="mt-1.5 inline-block h-2 w-2 shrink-0 rounded-full bg-green-medium"
+                        className="mt-2 inline-block h-1.5 w-1.5 shrink-0 rounded-full bg-green-medium"
                         aria-hidden
                       />
                       {item}
@@ -71,16 +70,15 @@ export function ForWho() {
                 </ul>
 
                 {"caption" in card && card.caption ? (
-                  <p className="mt-4 font-body text-caption text-clay-gray">
+                  <p className="mt-5 font-body text-caption font-light text-clay-gray">
                     {card.caption}
                   </p>
                 ) : null}
 
-                <div className="mt-7">
+                <div className="mt-8">
                   <WhatsAppButton
                     label="Agendar conversa"
                     message={card.message}
-                    className="w-full sm:w-auto"
                   />
                 </div>
               </article>

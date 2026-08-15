@@ -21,29 +21,30 @@ const testimonials = [
 
 export function Testimonials() {
   return (
-    <section id="depoimentos" className="scroll-mt-24 bg-paper py-16 md:py-24">
+    <section id="depoimentos" className="section-space scroll-mt-24 bg-paper">
       <div className="mx-auto max-w-6xl px-5 md:px-8">
-        <Reveal className="mx-auto max-w-2xl text-center">
+        <Reveal className="max-w-2xl">
           <SectionEyebrow>Depoimentos</SectionEyebrow>
-          <h2 className="font-heading text-[1.75rem] leading-tight text-brown md:text-[2.5rem]">
+          <h2 className="font-heading text-[1.75rem] leading-[1.2] text-brown md:text-[2.5rem]">
             O que dizem as pessoas que já passaram por aqui
           </h2>
+          <span className="accent-rule" aria-hidden />
         </Reveal>
 
-        <div className="mt-12 grid gap-8 md:grid-cols-3">
+        <div className="mt-14 grid gap-12 md:grid-cols-3 md:gap-10">
           {testimonials.map((t, i) => (
             <Reveal key={t.author} delay={i * 0.08}>
-              <blockquote className="relative h-full border-t border-clay-gray/35 pt-6">
+              <blockquote>
                 <span
-                  className="absolute -top-3 left-0 font-heading text-4xl leading-none text-rose-burnt"
+                  className="font-heading text-4xl leading-none text-rose-burnt"
                   aria-hidden
                 >
                   “
                 </span>
-                <p className="font-body text-base leading-relaxed text-brown/90">
+                <p className="-mt-2 font-body text-base font-light leading-relaxed text-brown/90">
                   {t.quote}
                 </p>
-                <footer className="mt-5 font-body text-sm font-semibold text-brown">
+                <footer className="mt-5 font-body text-sm text-brown">
                   — {t.author}
                 </footer>
               </blockquote>
@@ -51,7 +52,7 @@ export function Testimonials() {
           ))}
         </div>
 
-        <p className="mx-auto mt-10 max-w-3xl text-center font-body text-caption leading-relaxed text-clay-gray">
+        <p className="mx-auto mt-12 max-w-3xl font-body text-caption font-light leading-relaxed text-clay-gray md:text-center">
           Depoimentos ilustrativos, baseados em temas recorrentes do atendimento
           — não representam casos reais ou pessoas identificáveis, em respeito
           ao sigilo profissional.
