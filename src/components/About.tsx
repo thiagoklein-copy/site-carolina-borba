@@ -36,7 +36,10 @@ export function About() {
         <Reveal delay={0.06}>
           <SectionEyebrow icon="flowers">Quem sou eu</SectionEyebrow>
           <h2 className="font-heading text-[1.75rem] leading-[1.2] text-brown md:text-[2.5rem]">
-            Olá, eu sou a Carolina
+            Olá, eu sou a Carolina{" "}
+            <span className="font-script rotate-1 inline-block text-3xl text-green-medium md:text-4xl">
+              :)
+            </span>
           </h2>
           <span className="accent-rule" aria-hidden />
 

@@ -1,18 +1,28 @@
 import { Reveal } from "@/components/ui/Reveal";
 import { site } from "@/lib/site";
 
+const topics = [
+  "estilos de apego",
+  "modo criança vulnerável",
+  "autocrítica e valor pessoal",
+] as const;
+
 export function InstagramTeaser() {
   return (
     <section className="bg-paper py-16 md:py-24">
       <Reveal className="mx-auto max-w-2xl px-5 text-center md:px-8">
-        <h2 className="font-heading text-[1.75rem] leading-[1.2] text-brown md:text-[2.5rem]">
-          Antes da primeira conversa
+        <p className="font-script -rotate-1 text-xl text-green-medium md:text-2xl">
+          antes de marcar
+        </p>
+        <h2 className="mt-2 font-heading text-[1.75rem] leading-[1.2] text-brown md:text-[2.5rem]">
+          Dá uma olhada em como eu penso
         </h2>
         <span className="accent-rule mx-auto" aria-hidden />
         <p className="mt-6 font-body text-base font-light leading-relaxed text-brown/85 md:text-lg">
           Boa parte de quem chega até mim já se reconheceu em algum vídeo ou
-          legenda antes de marcar um horário. Se quiser sentir se faz sentido
-          pra ti, dá uma olhada no {site.instagramHandle} antes de decidir.
+          legenda antes de marcar um horário. No {site.instagramHandle} eu
+          falo sobre {topics.join(", ")} — sempre traduzindo teoria pra
+          linguagem de verdade.
         </p>
         <a
           href={site.instagramUrl}

@@ -38,6 +38,7 @@
   --color-clay-gray: var(--brand-clay-gray);
   --font-heading: var(--font-alegreya-sans);
   --font-body: var(--font-source-sans);
+  --font-script: var(--font-caveat);
 }
 
 html {
@@ -97,6 +98,12 @@ h4 {
   font-family: var(--font-source-sans), sans-serif;
 }
 
+/* Traço à mão — aparte pessoal, nunca um parágrafo inteiro (ver AGENTS/skill frontend-web) */
+.font-script {
+  font-family: var(--font-caveat), cursive;
+  font-weight: 600;
+}
+
 /* Soft paper panel over texture — brand manual pattern */
 .paper-panel {
   background: color-mix(in srgb, var(--color-paper) 92%, transparent);
@@ -121,4 +128,24 @@ h4 {
   .section-space {
     padding-block: 7rem;
   }
+}
+
+/* Bloco de cor cheia — recurso pontual pra quebrar a monotonia do papel (máx. 1-2 por página) */
+.color-block {
+  position: relative;
+  overflow: hidden;
+  color: var(--color-paper);
+}
+
+.color-block :is(h1, h2, h3, h4) {
+  color: var(--color-paper);
+}
+
+/* Grão sutil sobre blocos de cor cheia, pra nunca parecer chapado/digital demais */
+.grain-overlay {
+  position: absolute;
+  inset: 0;
+  opacity: 0.5;
+  mix-blend-mode: soft-light;
+  pointer-events: none;
 }

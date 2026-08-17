@@ -8,7 +8,7 @@ const navItems = [
   { href: "#sobre", label: "Sobre" },
   { href: "#abordagem", label: "Abordagem" },
   { href: "#para-quem", label: "Para quem é" },
-  { href: "#depoimentos", label: "Depoimentos" },
+  { href: "#reconhecimento", label: "Você se reconhece?" },
   { href: "#duvidas", label: "Dúvidas" },
   { href: "#contato", label: "Contato" },
 ] as const;

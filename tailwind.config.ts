@@ -23,6 +23,7 @@ const config: Config = {
       fontFamily: {
         heading: ["var(--font-alegreya-sans)", "sans-serif"],
         body: ["var(--font-source-sans)", "sans-serif"],
+        script: ["var(--font-caveat)", "cursive"],
       },
       fontSize: {
         h1: ["3.625rem", { lineHeight: "1.2", fontWeight: "500" }],

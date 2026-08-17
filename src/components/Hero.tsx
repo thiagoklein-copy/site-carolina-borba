@@ -1,84 +1,120 @@
+"use client";
+
 import Image from "next/image";
+import { useRef } from "react";
+import { motion, useReducedMotion, useScroll, useTransform } from "framer-motion";
 import { site } from "@/lib/site";
 import { WhatsAppButton } from "@/components/ui/WhatsAppButton";
+import { WordReveal } from "@/components/ui/WordReveal";
 
 export function Hero() {
+  const containerRef = useRef<HTMLDivElement>(null);
+  const reduce = useReducedMotion();
+  const { scrollYProgress } = useScroll({
+    target: containerRef,
+    offset: ["start start", "end start"],
+  });
+
+  const textureScale = useTransform(scrollYProgress, [0, 1], [1.08, 1]);
+  const textureY = useTransform(scrollYProgress, [0, 1], [0, 60]);
+  const contentOpacity = useTransform(scrollYProgress, [0, 0.6], [1, 0]);
+
   return (
-    <section id="topo" className="relative min-h-[92vh] overflow-hidden">
-      {/* Full-bleed brushstroke — brand cover treatment */}
-      <div className="absolute inset-0">
+    <section
+      ref={containerRef}
+      id="topo"
+      className="relative flex min-h-[100svh] flex-col justify-between overflow-hidden bg-paper"
+    >
+      {/* Textura sobe de leve com o scroll — respiro cinematográfico, nunca decorativo puro */}
+      <motion.div
+        className="absolute inset-0"
+        style={reduce ? undefined : { scale: textureScale, y: textureY }}
+      >
         <Image
-          src="/brand/texture-cover.webp"
+          src="/brand/texture-hero-wide.webp"
           alt=""
           fill
           priority
           className="object-cover object-center"
           sizes="100vw"
         />
-        <div className="absolute inset-0 bg-paper/35" />
-      </div>
+        <div className="absolute inset-0 bg-gradient-to-b from-paper/55 via-paper/70 to-paper" />
+      </motion.div>
 
-      <div className="relative mx-auto flex min-h-[92vh] max-w-6xl flex-col justify-center px-5 py-16 md:px-8 md:py-20">
-        <div className="grid items-center gap-12 lg:grid-cols-[1.05fr_0.95fr] lg:gap-8">
-          {/* Copy sits on paper panel so it never fights the texture */}
-          <div className="paper-panel max-w-xl px-6 py-8 md:px-9 md:py-10">
-            <p className="mb-5 font-body text-[0.7rem] font-semibold uppercase tracking-[0.18em] text-brown/70">
-              Psicóloga Clínica · {site.crp}
-            </p>
+      <motion.div
+        style={reduce ? undefined : { opacity: contentOpacity }}
+        className="relative mx-auto flex w-full max-w-6xl flex-1 flex-col justify-center px-5 pb-16 pt-32 md:px-8 md:pt-40"
+      >
+        <motion.p
+          initial={{ opacity: 0, y: 10 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+          className="font-body text-[0.72rem] font-semibold uppercase tracking-[0.2em] text-brown/60"
+        >
+          Psicóloga Clínica · {site.crp}
+        </motion.p>
 
-            <h1 className="font-heading text-[2.125rem] font-medium leading-[1.2] text-brown md:text-[3.4rem] md:leading-[1.15]">
-              Colocar em palavras o que você sente, mas nunca conseguiu{" "}
-              <span className="text-bordo">traduzir</span>.
-            </h1>
-            <span className="accent-rule" aria-hidden />
+        <h1 className="mt-5 max-w-4xl font-heading text-[2.4rem] font-medium leading-[1.12] text-brown md:text-[4rem] lg:text-[4.6rem]">
+          <WordReveal
+            text="Colocar em palavras o que você sente, mas nunca conseguiu traduzir."
+            highlight="traduzir."
+          />
+        </h1>
 
-            <p className="mt-6 font-body text-base font-light leading-relaxed text-brown/85 md:text-lg">
-              Psicoterapia para mulheres jovens e adolescentes que aprenderam
-              cedo a dar conta de tudo sozinhas. Atendimento presencial em Novo
-              Hamburgo/RS e online para todo o Brasil.
-            </p>
+        <motion.p
+          initial={{ opacity: 0, y: 10 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.9 }}
+          className="-rotate-1 font-script text-2xl text-bordo md:text-3xl"
+        >
+          um espaço pra quem aprendeu a dar conta de tudo sozinha :)
+        </motion.p>
 
-            <div className="mt-8 flex flex-col items-start gap-4 sm:flex-row sm:items-center">
-              <WhatsAppButton label="Falar no WhatsApp" />
-              <a
-                href="#sobre"
-                className="font-body text-base text-brown/80 transition-colors hover:text-bordo"
-              >
-                Conhecer meu trabalho ↓
-              </a>
-            </div>
-          </div>
+        <motion.p
+          initial={{ opacity: 0, y: 10 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 1.05 }}
+          className="mt-6 max-w-xl font-body text-base font-light leading-relaxed text-brown/85 md:text-lg"
+        >
+          Psicoterapia para mulheres jovens e adolescentes, com abordagem em
+          Terapia do Esquema Contextual. Presencial em Novo Hamburgo/RS e
+          online para todo o Brasil.
+        </motion.p>
 
-          {/* Paper seal over texture — brand cover focal point */}
-          <div className="relative mx-auto flex w-full max-w-[380px] flex-col items-center lg:max-w-none">
-            <div className="relative">
-              <Image
-                src="/brand/logo-seal.png"
-                alt="Marca Carolina Borba — duas figuras em abraço com flor"
-                width={400}
-                height={400}
-                priority
-                className="h-auto w-[280px] drop-shadow-none md:w-[360px] lg:w-[400px]"
-              />
-              <a
-                href={site.instagramUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="absolute bottom-4 right-0 rounded-full bg-paper px-4 py-1.5 font-body text-caption font-semibold text-brown transition-colors hover:text-bordo md:bottom-8 md:right-2"
-              >
-                {site.instagramHandle}
-              </a>
-            </div>
+        <motion.div
+          initial={{ opacity: 0, y: 10 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 1.2 }}
+          className="mt-9 flex flex-col items-start gap-5 sm:flex-row sm:items-center"
+        >
+          <WhatsAppButton label="Falar no WhatsApp" />
+          <a
+            href="#espelho"
+            className="font-body text-base text-brown/75 underline decoration-brown/25 underline-offset-4 transition-colors hover:text-bordo hover:decoration-bordo"
+          >
+            Conhecer meu trabalho ↓
+          </a>
+        </motion.div>
+      </motion.div>
 
-            <p className="mt-6 rounded-full bg-paper/90 px-5 py-2 text-center font-heading text-lg text-brown md:text-xl">
-              {site.brandName}
-            </p>
-            <p className="mt-1 font-body text-[0.7rem] uppercase tracking-[0.16em] text-brown/60">
-              Psicologia Clínica · {site.crp}
-            </p>
-          </div>
+      {/* Selo como carimbo — apoio, nunca protagonista */}
+      <motion.div
+        initial={{ opacity: 0, scale: 0.9, rotate: -6 }}
+        animate={{ opacity: 1, scale: 1, rotate: -8 }}
+        transition={{ duration: 0.7, delay: 0.4, ease: [0.25, 0.1, 0.25, 1] }}
+        className="pointer-events-none absolute bottom-6 right-4 hidden md:block lg:right-10"
+      >
+        <div className="relative">
+          <Image
+            src="/brand/logo-seal.png"
+            alt=""
+            width={132}
+            height={132}
+            aria-hidden
+            className="h-[110px] w-[110px] opacity-90 lg:h-[132px] lg:w-[132px]"
+          />
         </div>
-      </div>
+      </motion.div>
     </section>
   );
 }

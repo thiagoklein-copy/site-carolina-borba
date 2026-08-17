@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Alegreya_Sans, Source_Sans_3 } from "next/font/google";
+import { Alegreya_Sans, Caveat, Source_Sans_3 } from "next/font/google";
 import "./globals.css";
 import { site } from "@/lib/site";
 
@@ -14,6 +14,14 @@ const sourceSans = Source_Sans_3({
   subsets: ["latin"],
   weight: ["300", "400", "600"],
   variable: "--font-source-sans",
+  display: "swap",
+});
+
+/** Traço à mão — eco da logo e dos ícones ilustrados. Usar em doses curtas: um aparte, nunca um parágrafo inteiro. */
+const caveat = Caveat({
+  subsets: ["latin"],
+  weight: ["500", "600", "700"],
+  variable: "--font-caveat",
   display: "swap",
 });
 
@@ -51,38 +59,53 @@ export const metadata: Metadata = {
 
 const jsonLd = {
   "@context": "https://schema.org",
-  "@type": "ProfessionalService",
-  name: site.legalName,
-  alternateName: site.brandName,
-  description:
-    "Psicologia clínica com abordagem em Terapia do Esquema Contextual. Atendimento a mulheres jovens adultas e adolescentes, presencial em Novo Hamburgo/RS e online.",
-  url: "https://carolinaborba.com.br",
-  telephone: site.phoneDisplay,
-  email: site.email,
-  image: "/brand/logo-seal.png",
-  identifier: {
-    "@type": "PropertyValue",
-    name: "CRP",
-    value: site.crp,
-  },
-  areaServed: {
-    "@type": "Country",
-    name: "Brazil",
-  },
-  address: {
-    "@type": "PostalAddress",
-    addressLocality: site.city,
-    addressRegion: site.region,
-    addressCountry: "BR",
-  },
-  sameAs: [site.instagramUrl],
+  "@graph": [
+    {
+      "@type": "ProfessionalService",
+      "@id": "https://carolinaborba.com.br/#service",
+      name: site.legalName,
+      alternateName: site.brandName,
+      description:
+        "Psicologia clínica com abordagem em Terapia do Esquema Contextual. Atendimento a mulheres jovens adultas e adolescentes, presencial em Novo Hamburgo/RS e online.",
+      url: "https://carolinaborba.com.br",
+      telephone: site.phoneDisplay,
+      email: site.email,
+      image: "/brand/logo-seal.png",
+      identifier: {
+        "@type": "PropertyValue",
+        name: "CRP",
+        value: site.crp,
+      },
+      areaServed: {
+        "@type": "Country",
+        name: "Brazil",
+      },
+      address: {
+        "@type": "PostalAddress",
+        addressLocality: site.city,
+        addressRegion: site.region,
+        addressCountry: "BR",
+      },
+      sameAs: [site.instagramUrl],
+      provider: { "@id": "https://carolinaborba.com.br/#pessoa" },
+    },
+    {
+      "@type": "Person",
+      "@id": "https://carolinaborba.com.br/#pessoa",
+      name: site.legalName,
+      jobTitle: "Psicóloga",
+      honorificSuffix: site.crp,
+      email: site.email,
+      sameAs: [site.instagramUrl],
+    },
+  ],
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html
       lang="pt-BR"
-      className={`${alegreyaSans.variable} ${sourceSans.variable} h-full`}
+      className={`${alegreyaSans.variable} ${sourceSans.variable} ${caveat.variable} h-full`}
     >
       <body className="min-h-full bg-paper font-body text-brown antialiased">
         <script

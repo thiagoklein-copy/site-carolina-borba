@@ -143,7 +143,7 @@ export function ContactSection() {
 
             <button
               type="submit"
-              className="rounded-full bg-bordo px-7 py-3.5 font-body text-base font-semibold text-paper transition-opacity hover:opacity-90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-bordo"
+              className="rounded-full bg-bordo px-7 py-3.5 font-body text-base font-semibold text-paper shadow-[0_10px_24px_-12px_rgba(107,70,48,0.55)] transition-all hover:-translate-y-0.5 hover:bg-brown focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-bordo active:translate-y-0"
             >
               Quero agendar minha conversa
             </button>

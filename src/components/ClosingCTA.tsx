@@ -23,7 +23,10 @@ export function ClosingCTA() {
         />
 
         <div className="paper-panel px-8 py-8 md:px-12 md:py-10">
-          <h2 className="font-heading text-[1.75rem] leading-[1.2] text-brown md:text-[2.5rem]">
+          <p className="font-script -rotate-1 text-xl text-bordo md:text-2xl">
+            quando fizer sentido pra ti
+          </p>
+          <h2 className="mt-2 font-heading text-[1.75rem] leading-[1.2] text-brown md:text-[2.5rem]">
             Vamos conversar?
           </h2>
           <span className="accent-rule mx-auto" aria-hidden />
