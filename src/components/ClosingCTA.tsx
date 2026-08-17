@@ -6,7 +6,7 @@ export function ClosingCTA() {
   return (
     <section className="relative overflow-hidden bg-shadow-green py-24 md:py-32">
       <Image
-        src="/brand/texture-cover.webp"
+        src="/brand/texture-cover-v2.webp"
         alt=""
         fill
         className="object-cover opacity-30 mix-blend-soft-light"
@@ -26,7 +26,7 @@ export function ClosingCTA() {
           <p className="font-script -rotate-1 text-xl text-bordo md:text-2xl">
             quando fizer sentido pra ti
           </p>
-          <h2 className="mt-2 font-heading text-[1.75rem] leading-[1.2] text-brown md:text-[2.5rem]">
+          <h2 className="mt-2 font-heading text-[2.25rem] font-medium leading-[0.98] tracking-tight text-brown md:text-[3.75rem]">
             Vamos conversar?
           </h2>
           <span className="accent-rule mx-auto" aria-hidden />

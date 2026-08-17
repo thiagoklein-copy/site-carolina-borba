@@ -8,7 +8,7 @@ export function Mirror() {
           antes de mais nada
         </p>
 
-        <h2 className="mt-3 font-heading text-[1.85rem] font-medium leading-[1.3] text-brown md:text-[2.75rem]">
+        <h2 className="mt-3 font-heading text-[2rem] font-medium leading-[1.15] tracking-tight text-brown md:text-[3.1rem]">
           Talvez tu tenha aprendido cedo que se virar sozinha era o único
           jeito. Que pedir ajuda parecia fraqueza, ou que tem alguma coisa de
           errado contigo — quando, na verdade, é um padrão que se formou em

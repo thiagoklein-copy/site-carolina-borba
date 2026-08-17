@@ -14,7 +14,7 @@ export function InstagramTeaser() {
         <p className="font-script -rotate-1 text-xl text-shadow-green md:text-2xl">
           antes de marcar
         </p>
-        <h2 className="mt-2 font-heading text-[1.75rem] leading-[1.2] text-brown md:text-[2.5rem]">
+        <h2 className="mt-2 font-heading text-[2.25rem] font-medium leading-[0.98] tracking-tight text-brown md:text-[3.75rem]">
           Dá uma olhada em como eu penso
         </h2>
         <span className="accent-rule mx-auto" aria-hidden />

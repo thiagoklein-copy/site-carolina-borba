@@ -48,7 +48,7 @@ export function Header() {
         scrolled ? "bg-paper/90 backdrop-blur-md" : "bg-transparent"
       }`}
     >
-      <div className="mx-auto flex max-w-6xl items-center justify-between gap-4 px-5 py-4 md:px-8">
+      <div className="mx-auto flex max-w-[1320px] items-center justify-between gap-4 px-5 py-4 md:px-8">
         <a href="#topo" className="flex min-w-0 items-center gap-3">
           <Image
             src="/brand/logo-seal.png"

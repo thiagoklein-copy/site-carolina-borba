@@ -1,7 +1,6 @@
 import { Header } from "@/components/Header";
 import { Hero } from "@/components/Hero";
 import { Mirror } from "@/components/Mirror";
-import { TrustBar } from "@/components/TrustBar";
 import { About } from "@/components/About";
 import { ForWho } from "@/components/ForWho";
 import { Approach } from "@/components/Approach";
@@ -20,7 +19,6 @@ export default function Home() {
       <main>
         <Hero />
         <Mirror />
-        <TrustBar />
         <About />
         <ForWho />
         <Approach />

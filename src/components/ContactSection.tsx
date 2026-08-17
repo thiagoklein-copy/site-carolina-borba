@@ -31,9 +31,9 @@ export function ContactSection() {
 
   return (
     <section id="contato" className="section-space scroll-mt-24 bg-paper">
-      <div className="mx-auto grid max-w-6xl gap-14 px-5 md:grid-cols-[1fr_1.05fr] md:gap-20 md:px-8">
+      <div className="mx-auto grid max-w-[1320px] gap-14 px-5 md:grid-cols-[1fr_1.05fr] md:gap-20 md:px-8">
         <Reveal>
-          <h2 className="font-heading text-[1.75rem] leading-[1.2] text-brown md:text-[2.5rem]">
+          <h2 className="font-heading text-[2.25rem] font-medium leading-[0.98] tracking-tight text-brown md:text-[3.75rem]">
             O primeiro passo pode ser mais leve do que parece
           </h2>
           <span className="accent-rule" aria-hidden />

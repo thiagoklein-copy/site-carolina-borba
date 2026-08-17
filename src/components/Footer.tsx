@@ -12,7 +12,7 @@ const navLinks = [
 export function Footer() {
   return (
     <footer className="bg-shadow-green text-paper">
-      <div className="mx-auto grid max-w-6xl gap-12 px-5 py-16 md:grid-cols-[1.5fr_1fr_1fr] md:gap-14 md:px-8">
+      <div className="mx-auto grid max-w-[1320px] gap-12 px-5 py-16 md:grid-cols-[1.5fr_1fr_1fr] md:gap-14 md:px-8">
         <div>
           <div className="flex items-center gap-3">
             <Image
@@ -83,7 +83,7 @@ export function Footer() {
       </div>
 
       <div className="border-t border-paper/10">
-        <p className="mx-auto max-w-6xl px-5 py-5 font-body text-caption font-light text-paper/75 md:px-8">
+        <p className="mx-auto max-w-[1320px] px-5 py-5 font-body text-caption font-light text-paper/75 md:px-8">
           © 2026 Carolina da Cunha Borba Psicologia · {site.crp}
         </p>
       </div>

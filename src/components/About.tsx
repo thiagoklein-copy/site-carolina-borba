@@ -8,7 +8,7 @@ export function About() {
       {/* Soft texture wash in corner — seasoning, not full background */}
       <div className="pointer-events-none absolute -right-20 top-10 hidden h-72 w-72 opacity-40 md:block">
         <Image
-          src="/brand/texture-soft.webp"
+          src="/brand/texture-soft-v2.webp"
           alt=""
           fill
           className="object-cover"
@@ -16,7 +16,7 @@ export function About() {
         />
       </div>
 
-      <div className="relative mx-auto grid max-w-6xl items-start gap-14 px-5 md:grid-cols-[0.85fr_1.15fr] md:gap-20 md:px-8">
+      <div className="relative mx-auto grid max-w-[1320px] items-start gap-14 px-5 md:grid-cols-[0.85fr_1.15fr] md:gap-20 md:px-8">
         <Reveal className="mx-auto w-full max-w-[300px] md:mx-0">
           <Image
             src="/brand/logo-seal.png"
@@ -33,7 +33,7 @@ export function About() {
         </Reveal>
 
         <Reveal delay={0.06}>
-          <h2 className="font-heading text-[1.75rem] leading-[1.2] text-brown md:text-[2.5rem]">
+          <h2 className="font-heading text-[2.25rem] font-medium leading-[0.98] tracking-tight text-brown md:text-[3.75rem]">
             Olá, eu sou a Carolina{" "}
             <span className="font-script rotate-1 inline-block text-3xl text-shadow-green md:text-4xl">
               :)

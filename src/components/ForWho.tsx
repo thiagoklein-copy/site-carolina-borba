@@ -33,9 +33,9 @@ const cards = [
 export function ForWho() {
   return (
     <section id="para-quem" className="section-space scroll-mt-24 bg-paper">
-      <div className="mx-auto max-w-6xl px-5 md:px-8">
+      <div className="mx-auto max-w-[1320px] px-5 md:px-8">
         <Reveal className="max-w-2xl">
-          <h2 className="font-heading text-[1.75rem] leading-[1.2] text-brown md:text-[2.5rem]">
+          <h2 className="font-heading text-[2.25rem] font-medium leading-[0.98] tracking-tight text-brown md:text-[3.75rem]">
             Talvez isso faça sentido pra ti
           </h2>
           <span className="accent-rule" aria-hidden />

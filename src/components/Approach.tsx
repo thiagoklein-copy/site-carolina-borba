@@ -23,9 +23,9 @@ export function Approach() {
   return (
     <>
       <section id="abordagem" className="section-space scroll-mt-24 bg-paper">
-        <div className="mx-auto max-w-6xl px-5 md:px-8">
+        <div className="mx-auto max-w-[1320px] px-5 md:px-8">
           <Reveal className="max-w-3xl">
-            <h2 className="font-heading text-[1.75rem] leading-[1.2] text-brown md:text-[2.5rem]">
+            <h2 className="font-heading text-[2.25rem] font-medium leading-[0.98] tracking-tight text-brown md:text-[3.75rem]">
               Contexto, não diagnóstico
             </h2>
             <span className="accent-rule" aria-hidden />
@@ -71,7 +71,7 @@ export function Approach() {
           <p className="font-script -rotate-1 text-xl text-yellow-morning md:text-2xl">
             e não é só teoria
           </p>
-          <h2 className="mt-4 font-heading text-[1.85rem] font-medium leading-[1.3] text-paper md:text-[2.75rem]">
+          <h2 className="mt-4 font-heading text-[2rem] font-bold leading-[1.05] tracking-tight text-paper md:text-[3.25rem]">
             A terapia não é um espelho frio e neutro. É um encontro.
           </h2>
           <p className="mx-auto mt-6 max-w-xl font-body text-base font-light leading-relaxed text-paper/75 md:text-lg">
