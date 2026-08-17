@@ -1,5 +1,4 @@
 import { Reveal } from "@/components/ui/Reveal";
-import { SectionEyebrow } from "@/components/ui/SectionEyebrow";
 import { WhatsAppButton } from "@/components/ui/WhatsAppButton";
 
 const cards = [
@@ -36,7 +35,6 @@ export function ForWho() {
     <section id="para-quem" className="section-space scroll-mt-24 bg-paper">
       <div className="mx-auto max-w-6xl px-5 md:px-8">
         <Reveal className="max-w-2xl">
-          <SectionEyebrow icon="sunflower">Pra quem é esse espaço</SectionEyebrow>
           <h2 className="font-heading text-[1.75rem] leading-[1.2] text-brown md:text-[2.5rem]">
             Talvez isso faça sentido pra ti
           </h2>
@@ -50,7 +48,7 @@ export function ForWho() {
                 <h3 className="font-heading text-[1.65rem] text-brown md:text-2xl">
                   {card.title}
                 </h3>
-                <p className="mt-4 font-body text-base font-light leading-relaxed text-brown/85">
+                <p className="mt-4 font-body text-base font-light leading-relaxed text-brown/90">
                   {card.body}
                 </p>
 
@@ -70,7 +68,7 @@ export function ForWho() {
                 </ul>
 
                 {"caption" in card && card.caption ? (
-                  <p className="mt-5 font-body text-caption font-light text-clay-gray">
+                  <p className="mt-5 font-body text-caption font-light text-brown/85">
                     {card.caption}
                   </p>
                 ) : null}

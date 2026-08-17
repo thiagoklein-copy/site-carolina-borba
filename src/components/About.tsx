@@ -1,6 +1,5 @@
 import Image from "next/image";
 import { Reveal } from "@/components/ui/Reveal";
-import { SectionEyebrow } from "@/components/ui/SectionEyebrow";
 import { site } from "@/lib/site";
 
 export function About() {
@@ -26,7 +25,7 @@ export function About() {
             height={300}
             className="h-auto w-full"
           />
-          <p className="mt-5 text-center font-body text-caption leading-relaxed text-brown/55 md:text-left">
+          <p className="mt-5 text-center font-body text-caption leading-relaxed text-brown/90 md:text-left">
             Psicóloga {site.legalName}
             <br />
             {site.crp}
@@ -34,10 +33,9 @@ export function About() {
         </Reveal>
 
         <Reveal delay={0.06}>
-          <SectionEyebrow icon="flowers">Quem sou eu</SectionEyebrow>
           <h2 className="font-heading text-[1.75rem] leading-[1.2] text-brown md:text-[2.5rem]">
             Olá, eu sou a Carolina{" "}
-            <span className="font-script rotate-1 inline-block text-3xl text-green-medium md:text-4xl">
+            <span className="font-script rotate-1 inline-block text-3xl text-shadow-green md:text-4xl">
               :)
             </span>
           </h2>
@@ -71,28 +69,26 @@ export function About() {
             </p>
           </div>
 
-          <aside className="relative mt-10 max-w-lg pl-5">
+          <aside className="relative mt-10 max-w-lg">
             <span
-              className="absolute left-0 top-0 font-heading text-4xl leading-none text-rose-burnt"
+              className="font-heading text-5xl leading-none text-rose-burnt"
               aria-hidden
             >
               “
             </span>
-            <div className="flex gap-3 border-l-2 border-yellow-morning pl-5">
+            <p className="-mt-3 flex items-start gap-2 font-heading text-lg font-normal italic leading-relaxed text-brown md:text-xl">
               <Image
                 src="/brand/icon-flowers.png"
                 alt=""
-                width={24}
-                height={24}
-                className="mt-1 h-6 w-6 shrink-0 object-contain"
+                width={22}
+                height={22}
+                className="mt-1.5 h-[22px] w-[22px] shrink-0 object-contain"
                 aria-hidden
               />
-              <p className="font-heading text-lg font-normal italic leading-relaxed text-brown md:text-xl">
-                Quando muito precisei, uma psicóloga me lembrou que eu não
-                estava sozinha. É isso que desejo proporcionar às pessoas que
-                atendo.
-              </p>
-            </div>
+              Quando muito precisei, uma psicóloga me lembrou que eu não
+              estava sozinha. É isso que desejo proporcionar às pessoas que
+              atendo.
+            </p>
           </aside>
         </Reveal>
       </div>

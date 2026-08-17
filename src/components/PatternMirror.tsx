@@ -1,5 +1,4 @@
 import { Reveal } from "@/components/ui/Reveal";
-import { SectionEyebrow } from "@/components/ui/SectionEyebrow";
 
 /**
  * Frases recorrentes de quem chega até a Carolina — documentadas no material de marca
@@ -18,7 +17,6 @@ export function PatternMirror() {
     <section id="reconhecimento" className="section-space scroll-mt-24 bg-paper">
       <div className="mx-auto max-w-6xl px-5 md:px-8">
         <Reveal className="max-w-2xl">
-          <SectionEyebrow>Talvez tu reconheça</SectionEyebrow>
           <h2 className="font-heading text-[1.75rem] leading-[1.2] text-brown md:text-[2.5rem]">
             Frases que voltam sempre nas primeiras conversas
           </h2>
@@ -41,7 +39,7 @@ export function PatternMirror() {
         </div>
 
         <Reveal delay={0.2}>
-          <p className="mx-auto mt-10 max-w-2xl font-body text-base font-light leading-relaxed text-brown/75 md:text-center md:text-lg">
+          <p className="mx-auto mt-10 max-w-2xl font-body text-base font-light leading-relaxed text-brown/85 md:text-center md:text-lg">
             Nenhuma dessas frases é defeito. São padrões que se formaram em
             algum vínculo — e é isso que a gente vai entender juntas.
           </p>

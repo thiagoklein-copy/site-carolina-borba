@@ -2,7 +2,6 @@
 
 import { useState } from "react";
 import { Reveal } from "@/components/ui/Reveal";
-import { SectionEyebrow } from "@/components/ui/SectionEyebrow";
 
 const faqs = [
   {
@@ -34,7 +33,6 @@ export function FAQ() {
     <section id="duvidas" className="section-space scroll-mt-24 bg-paper">
       <div className="mx-auto max-w-3xl px-5 md:px-8">
         <Reveal>
-          <SectionEyebrow>Dúvidas frequentes</SectionEyebrow>
           <h2 className="font-heading text-[1.75rem] leading-[1.2] text-brown md:text-[2.5rem]">
             Antes de começarmos
           </h2>
@@ -64,7 +62,7 @@ export function FAQ() {
                     </span>
                   </button>
                   {isOpen ? (
-                    <p className="mt-3 max-w-2xl font-body text-base font-light leading-relaxed text-brown/80">
+                    <p className="mt-3 max-w-2xl font-body text-base font-light leading-relaxed text-brown/90">
                       {item.a}
                     </p>
                   ) : null}

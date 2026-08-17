@@ -2,7 +2,6 @@
 
 import { FormEvent, useState } from "react";
 import { Reveal } from "@/components/ui/Reveal";
-import { SectionEyebrow } from "@/components/ui/SectionEyebrow";
 import { site, whatsappUrl } from "@/lib/site";
 
 const interestOptions = [
@@ -34,12 +33,11 @@ export function ContactSection() {
     <section id="contato" className="section-space scroll-mt-24 bg-paper">
       <div className="mx-auto grid max-w-6xl gap-14 px-5 md:grid-cols-[1fr_1.05fr] md:gap-20 md:px-8">
         <Reveal>
-          <SectionEyebrow icon="notebook">Vamos conversar</SectionEyebrow>
           <h2 className="font-heading text-[1.75rem] leading-[1.2] text-brown md:text-[2.5rem]">
             O primeiro passo pode ser mais leve do que parece
           </h2>
           <span className="accent-rule" aria-hidden />
-          <p className="mt-6 font-body text-base font-light leading-relaxed text-brown/85 md:text-lg">
+          <p className="mt-6 font-body text-base font-light leading-relaxed text-brown/90 md:text-lg">
             Me conta um pouco do que te trouxe até aqui. Eu respondo pelo
             WhatsApp pra alinharmos formato (presencial ou online) e tirar
             dúvidas com calma.
@@ -84,7 +82,7 @@ export function ContactSection() {
             <div>
               <label
                 htmlFor="nome"
-                className="mb-1 block font-body text-sm text-brown/70"
+                className="mb-1 block font-body text-sm text-brown/85"
               >
                 Nome
               </label>
@@ -103,7 +101,7 @@ export function ContactSection() {
             <div>
               <label
                 htmlFor="telefone"
-                className="mb-1 block font-body text-sm text-brown/70"
+                className="mb-1 block font-body text-sm text-brown/85"
               >
                 Telefone/WhatsApp
               </label>
@@ -122,7 +120,7 @@ export function ContactSection() {
             <div>
               <label
                 htmlFor="interesse"
-                className="mb-1 block font-body text-sm text-brown/70"
+                className="mb-1 block font-body text-sm text-brown/85"
               >
                 O que faz mais sentido pra ti agora?
               </label>
@@ -148,7 +146,7 @@ export function ContactSection() {
               Quero agendar minha conversa
             </button>
 
-            <p className="font-body text-caption font-light text-clay-gray">
+            <p className="font-body text-caption font-light text-brown/85">
               Ao enviar, você será redirecionada ao WhatsApp com sua mensagem
               pronta.
             </p>

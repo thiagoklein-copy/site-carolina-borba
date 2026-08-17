@@ -62,7 +62,7 @@ export function Header() {
             <span className="block font-heading text-[1.15rem] font-medium leading-none text-brown md:text-xl">
               {site.brandName}
             </span>
-            <span className="mt-1 block font-body text-[0.68rem] leading-snug tracking-wide text-brown/55">
+            <span className="mt-1 block font-body text-[0.68rem] leading-snug tracking-wide text-brown/90">
               Psicóloga {site.legalName} · {site.crp}
             </span>
           </span>
@@ -76,7 +76,7 @@ export function Header() {
               className={`font-body text-[0.92rem] tracking-wide transition-colors ${
                 active === item.href
                   ? "text-bordo"
-                  : "text-brown/70 hover:text-brown"
+                  : "text-brown/85 hover:text-brown"
               }`}
             >
               {item.label}

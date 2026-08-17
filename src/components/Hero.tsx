@@ -49,7 +49,7 @@ export function Hero() {
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
-          className="font-body text-[0.72rem] font-semibold uppercase tracking-[0.2em] text-brown/60"
+          className="font-body text-[0.72rem] font-semibold uppercase tracking-[0.2em] text-brown/90"
         >
           Psicóloga Clínica · {site.crp}
         </motion.p>
@@ -74,7 +74,7 @@ export function Hero() {
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 1.05 }}
-          className="mt-6 max-w-xl font-body text-base font-light leading-relaxed text-brown/85 md:text-lg"
+          className="mt-6 max-w-xl font-body text-base font-light leading-relaxed text-brown/90 md:text-lg"
         >
           Psicoterapia para mulheres jovens e adolescentes, com abordagem em
           Terapia do Esquema Contextual. Presencial em Novo Hamburgo/RS e
@@ -90,7 +90,7 @@ export function Hero() {
           <WhatsAppButton label="Falar no WhatsApp" />
           <a
             href="#espelho"
-            className="font-body text-base text-brown/75 underline decoration-brown/25 underline-offset-4 transition-colors hover:text-bordo hover:decoration-bordo"
+            className="font-body text-base text-brown/85 underline decoration-brown/40 underline-offset-4 transition-colors hover:text-bordo hover:decoration-bordo"
           >
             Conhecer meu trabalho ↓
           </a>

@@ -11,7 +11,7 @@ export function InstagramTeaser() {
   return (
     <section className="bg-paper py-16 md:py-24">
       <Reveal className="mx-auto max-w-2xl px-5 text-center md:px-8">
-        <p className="font-script -rotate-1 text-xl text-green-medium md:text-2xl">
+        <p className="font-script -rotate-1 text-xl text-shadow-green md:text-2xl">
           antes de marcar
         </p>
         <h2 className="mt-2 font-heading text-[1.75rem] leading-[1.2] text-brown md:text-[2.5rem]">

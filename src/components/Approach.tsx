@@ -1,6 +1,5 @@
 import Image from "next/image";
 import { Reveal } from "@/components/ui/Reveal";
-import { SectionEyebrow } from "@/components/ui/SectionEyebrow";
 
 const steps = [
   {
@@ -26,12 +25,11 @@ export function Approach() {
       <section id="abordagem" className="section-space scroll-mt-24 bg-paper">
         <div className="mx-auto max-w-6xl px-5 md:px-8">
           <Reveal className="max-w-3xl">
-            <SectionEyebrow icon="book">Minha abordagem</SectionEyebrow>
             <h2 className="font-heading text-[1.75rem] leading-[1.2] text-brown md:text-[2.5rem]">
               Contexto, não diagnóstico
             </h2>
             <span className="accent-rule" aria-hidden />
-            <p className="mt-6 font-body text-base font-light leading-relaxed text-brown/85 md:text-lg">
+            <p className="mt-6 font-body text-base font-light leading-relaxed text-brown/90 md:text-lg">
               Na Terapia do Esquema Contextual, a gente entende como a história e
               o contexto formaram os padrões de hoje — pra, a partir disso,
               construir uma versão mais assertiva e compassiva de ti. Não se trata
@@ -44,13 +42,13 @@ export function Approach() {
             {steps.map((step, i) => (
               <Reveal key={step.n} delay={i * 0.08}>
                 <li>
-                  <span className="font-heading text-sm tracking-[0.2em] text-green-medium">
+                  <span className="font-heading text-sm tracking-[0.2em] text-shadow-green">
                     {step.n}
                   </span>
                   <h3 className="mt-3 font-heading text-2xl text-brown">
                     {step.title}
                   </h3>
-                  <p className="mt-3 font-body text-base font-light leading-relaxed text-brown/80">
+                  <p className="mt-3 font-body text-base font-light leading-relaxed text-brown/90">
                     {step.body}
                   </p>
                 </li>
